@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, graphql } from "gatsby";
 
 import Layout from "../components/layout";
+import Image from "../components/image";
 import SEO from "../components/seo";
 
 const IndexPage = props => {
@@ -15,6 +16,11 @@ const IndexPage = props => {
             <h1>{node.frontmatter.title}</h1>
           </Link>
           <span>{node.frontmatter.date}</span>
+          <Image />
+          <img
+            src={`${node.fields.slug}${node.frontmatter.title_image}`}
+            alt={node.frontmatter.title}
+          />
           <p>{node.excerpt}</p>
         </div>
       ))}
@@ -36,6 +42,7 @@ export const listQuery = graphql`
           frontmatter {
             date(formatString: "D MMMM YYYY", locale: "ru-UA")
             title
+            title_image
           }
         }
       }

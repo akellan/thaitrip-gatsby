@@ -11,8 +11,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/posts-data/inception/images`,
-        ignore: "**/*\\.md"
+        path: `${__dirname}/src/posts-data`
       }
     },
     {

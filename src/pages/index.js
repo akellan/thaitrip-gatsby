@@ -11,12 +11,16 @@ const IndexPage = props => {
     <Layout>
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       {postList.edges.map(({ node }, i) => (
-        <div className="post-list">
+        <div key={node.id} className="post-list">
           <Link to={node.fields.slug} className="link">
             <h1>{node.frontmatter.title}</h1>
           </Link>
           <span>{node.frontmatter.date}</span>
-          <Image />
+          <Image
+            relativePath={`${node.fields.slug}images/${
+              node.frontmatter.title_image
+            }`}
+          />
           <img
             src={`${node.fields.slug}${node.frontmatter.title_image}`}
             alt={node.frontmatter.title}
@@ -35,6 +39,7 @@ export const listQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
+          id
           fields {
             slug
           }

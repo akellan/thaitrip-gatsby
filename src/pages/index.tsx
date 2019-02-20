@@ -1,23 +1,41 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import Img from "gatsby-image";
-
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
+import { BlogListItem } from "../main-page/components/BlogListItem";
+import { css } from "@emotion/core";
+
+const blogListContainer = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 const IndexPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
-      {postList.edges.map(({ node }, i) => (
-        <div key={node.id} className="post-list">
-          <Link to={node.fields.slug} className="link">
-            <h1>{node.frontmatter.title}</h1>
-          </Link>
-          <span>{node.frontmatter.date}</span>
-          <Img fixed={node.frontmatter.title_image.childImageSharp.fixed} />
-          <p>{node.excerpt}</p>
-        </div>
-      ))}
+      <div css={blogListContainer}>
+        {postList.edges.map(
+          ({
+            node: {
+              frontmatter: { title, date, title_image },
+              excerpt,
+              id,
+              fields: { slug }
+            }
+          }) => (
+            <BlogListItem
+              key={id}
+              title={title}
+              date={date}
+              slug={slug}
+              image={title_image}
+              excerpt={excerpt}
+            />
+          )
+        )}
+      </div>
     </Layout>
   );
 };

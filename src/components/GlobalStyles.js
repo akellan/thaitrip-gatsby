@@ -20,14 +20,15 @@ export const GlobalStyles = () => (
       }
 
       body {
-        font-family: "Laila", sans-serif;
+        font-family: "Ubuntu", sans-serif;
+        font-weight: 300;
       }
 
       * {
         box-sizing: inherit;
       }
 
-      @import url("https://fonts.googleapis.com/css?family=Laila:500");
+      @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
     `}
   />
 );

@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { Link } from "@reach/router";
 import { defaultLink, greenText } from "../../styles/common";
+import { HalfStyle } from "../../components/HalfStyle";
 
 const siteTitle = css`
   font-size: 70px;
@@ -19,7 +20,7 @@ export const MainHeader = () => {
     <header css={siteTitle}>
       <div css={headerContainer}>
         <Link css={defaultLink} to="/">
-          Thai<span css={greenText}>Trip</span>
+          <HalfStyle text="ThaiTrip" halfStyle={greenText} />
         </Link>
       </div>
     </header>

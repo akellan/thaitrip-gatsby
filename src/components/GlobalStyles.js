@@ -16,7 +16,7 @@ export const GlobalStyles = () => (
       }
 
       html {
-        box-sizing: content-box;
+        box-sizing: border-box;
       }
 
       body {

@@ -15,6 +15,7 @@ interface BlogListItemProps {
 
 const blogItemContainer = css`
   width: 70vw;
+  margin: 2rem;
 `;
 
 const dateBlock = css`
@@ -27,6 +28,31 @@ const excerptContainer = css`
   }
 `;
 
+const articleLink = css`
+  ${defaultLink}
+  transition: color 0.3s;
+  :hover {
+    ${greenText}
+  }
+
+  :hover > div {
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  }
+`;
+
+const imageShadow = css`
+  height: 130px;
+  transition: all 0.3s;
+  margin: 0.5rem 0;
+  display: inline-block;
+`;
+
+const articleTitleImage = css`
+  border: 5px solid #fff;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+  margin: 0;
+`;
+
 export const BlogListItem = ({
   title,
   date,
@@ -35,11 +61,17 @@ export const BlogListItem = ({
   excerpt
 }: BlogListItemProps) => (
   <article css={blogItemContainer}>
-    <Link to={slug} css={defaultLink}>
+    <Link to={slug} css={articleLink}>
       <h1 css={articleTitle}>
         <HalfStyle text={title} halfStyle={greenText} />
       </h1>
-      <Img fixed={image.childImageSharp.fixed} />
+      <div css={imageShadow}>
+        <Img
+          style={{ height: "130px", width: "430px" }}
+          css={articleTitleImage}
+          fixed={image.childImageSharp.fixed}
+        />
+      </div>
     </Link>
     <div css={excerptContainer}>
       <span css={dateBlock}>{date}</span>

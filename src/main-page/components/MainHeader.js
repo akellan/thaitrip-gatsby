@@ -10,6 +10,8 @@ const siteTitle = css`
 const headerContainer = css`
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 8rem;
 `;
 
 export const MainHeader = () => {

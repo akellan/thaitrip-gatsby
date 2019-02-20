@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import Img from "gatsby-image";
 
 import Layout from "../components/layout";
-import Image from "../components/image";
-import SEO from "../components/seo";
 
 const IndexPage = props => {
   const postList = props.data.allMarkdownRemark;
@@ -15,7 +14,7 @@ const IndexPage = props => {
             <h1>{node.frontmatter.title}</h1>
           </Link>
           <span>{node.frontmatter.date}</span>
-          <img src={node.frontmatter.title_image.publicURL} />
+          <Img fixed={node.frontmatter.title_image.childImageSharp.fixed} />
           <p>{node.excerpt}</p>
         </div>
       ))}
@@ -39,7 +38,11 @@ export const listQuery = graphql`
             date(formatString: "D MMMM YYYY", locale: "ru-UA")
             title
             title_image {
-              publicURL
+              childImageSharp {
+                fixed {
+                  ...GatsbyImageSharpFixed
+                }
+              }
             }
           }
         }

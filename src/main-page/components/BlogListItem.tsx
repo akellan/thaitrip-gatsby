@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Link } from "@reach/router";
 import Img from "gatsby-image";
 import { css } from "@emotion/core";
-import { defaultLink, greenText } from "../../styles/common";
+import { greenText } from "../../styles/common";
 import { HalfStyle } from "../../components/HalfStyle";
 import { Typography } from "@material-ui/core";
+import { AppLink } from "../../components/AppLink";
 
 interface BlogListItemProps {
   title: string;
@@ -30,7 +30,6 @@ const excerptContainer = css`
 `;
 
 const articleLink = css`
-  ${defaultLink}
   transition: color 0.3s;
   :hover {
     ${greenText}
@@ -62,18 +61,18 @@ export const BlogListItem = ({
   excerpt
 }: BlogListItemProps) => (
   <article css={blogItemContainer}>
-    <Link to={slug} css={articleLink}>
-      <Typography variant="h3">
+    <Typography variant="h3">
+      <AppLink underline="none" to={slug} css={articleLink}>
         <HalfStyle text={title} halfStyle={greenText} />
-      </Typography>
-      <div css={imageShadow}>
-        <Img
-          style={{ height: "130px", width: "430px" }}
-          css={articleTitleImage}
-          fixed={image.childImageSharp.fixed}
-        />
-      </div>
-    </Link>
+        <div css={imageShadow}>
+          <Img
+            style={{ height: "130px", width: "430px" }}
+            css={articleTitleImage}
+            fixed={image.childImageSharp.fixed}
+          />
+        </div>
+      </AppLink>
+    </Typography>
     <div css={excerptContainer}>
       <Typography variant="h6" css={dateBlock}>
         {date}

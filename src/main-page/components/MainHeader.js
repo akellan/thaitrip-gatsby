@@ -1,9 +1,9 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { Link } from "@reach/router";
-import { defaultLink, greenText } from "../../styles/common";
+import { greenText } from "../../styles/common";
 import { HalfStyle } from "../../components/HalfStyle";
 import { Typography, Grid } from "@material-ui/core";
+import { AppLink } from "../../components/AppLink";
 
 const headerContainer = css`
   height: 8rem;
@@ -11,16 +11,16 @@ const headerContainer = css`
 
 export const MainHeader = () => {
   return (
-    <Typography component="header" variant="h2">
+    <Typography component="header" variant="h1">
       <Grid
         css={headerContainer}
         container={true}
         justify="center"
         alignItems="center"
       >
-        <Link css={defaultLink} to="/">
+        <AppLink underline="none" to="/">
           <HalfStyle text="ThaiTrip" halfStyle={greenText} />
-        </Link>
+        </AppLink>
       </Grid>
     </Typography>
   );

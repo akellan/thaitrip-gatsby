@@ -1,34 +1,5 @@
 import React from "react";
-import { Global, css } from "@emotion/core";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import "typeface-roboto";
 
-export const GlobalStyles = () => (
-  <Global
-    styles={css`
-      * {
-        margin: 0;
-        padding: 0;
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: inherit;
-      }
-
-      html {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Ubuntu", sans-serif;
-        font-weight: 300;
-      }
-
-      * {
-        box-sizing: inherit;
-      }
-
-      @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
-    `}
-  />
-);
+export const GlobalStyles = () => <CssBaseline />;

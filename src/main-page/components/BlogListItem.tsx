@@ -2,8 +2,9 @@ import * as React from "react";
 import { Link } from "@reach/router";
 import Img from "gatsby-image";
 import { css } from "@emotion/core";
-import { defaultLink, articleTitle, greenText } from "../../styles/common";
+import { defaultLink, greenText } from "../../styles/common";
 import { HalfStyle } from "../../components/HalfStyle";
+import { Typography } from "@material-ui/core";
 
 interface BlogListItemProps {
   title: string;
@@ -62,9 +63,9 @@ export const BlogListItem = ({
 }: BlogListItemProps) => (
   <article css={blogItemContainer}>
     <Link to={slug} css={articleLink}>
-      <h1 css={articleTitle}>
+      <Typography variant="h3">
         <HalfStyle text={title} halfStyle={greenText} />
-      </h1>
+      </Typography>
       <div css={imageShadow}>
         <Img
           style={{ height: "130px", width: "430px" }}
@@ -74,8 +75,12 @@ export const BlogListItem = ({
       </div>
     </Link>
     <div css={excerptContainer}>
-      <span css={dateBlock}>{date}</span>
-      <p>{excerpt}</p>
+      <Typography variant="h6" css={dateBlock}>
+        {date}
+      </Typography>
+      <Typography variant="body1" component="p">
+        {excerpt}
+      </Typography>
     </div>
   </article>
 );

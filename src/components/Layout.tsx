@@ -1,13 +1,13 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, Fragment } from "react";
 import { MainHeader } from "../main-page/components";
-import { GlobalStyles } from "./GlobalStyles";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import { appTheme } from "../styles/appTheme";
+import "./GlobalStyles";
+import withRoot from "../styles/withRoot";
 
-export const Layout: FunctionComponent = ({ children }) => (
-  <MuiThemeProvider theme={appTheme}>
-    <GlobalStyles />
+const LayoutDefault: FunctionComponent = ({ children }) => (
+  <Fragment>
     <MainHeader />
     <main>{children}</main>
-  </MuiThemeProvider>
+  </Fragment>
 );
+
+export const Layout = withRoot(LayoutDefault);

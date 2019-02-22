@@ -55,7 +55,7 @@ const BlogListItemBase = ({
       <HalfStyle text={title} />
       <div className={classes.imageShadow}>
         <Img
-          style={{ width: "100%" }}
+          style={{ width: "100%", display: "block" }}
           className={classes.articleTitleImage}
           fixed={image.childImageSharp.fixed}
         />

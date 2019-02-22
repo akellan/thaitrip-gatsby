@@ -1,9 +1,9 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { greenText } from "../../styles/common";
-import { HalfStyle } from "../../components/HalfStyle";
+import { greenText } from "../styles/common";
+import { HalfStyle } from "./HalfStyle";
 import { Typography, Grid } from "@material-ui/core";
-import { AppLink } from "../../components/AppLink";
+import { AppLink } from "./AppLink";
 
 const headerContainer = css`
   height: 8rem;

@@ -2,7 +2,7 @@ import { Link as ReachLink } from "@reach/router";
 import React, { PureComponent } from "react";
 import Link, { LinkProps } from "@material-ui/core/Link";
 
-interface AppLinkProps extends LinkProps {
+export interface AppLinkProps extends LinkProps {
   to: string;
 }
 

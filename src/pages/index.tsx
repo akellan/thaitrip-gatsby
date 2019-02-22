@@ -2,15 +2,7 @@ import React, { Fragment } from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components";
 import { BlogListItem } from "../main-page/components/BlogListItem";
-import { css } from "@emotion/core";
 import { Grid } from "@material-ui/core";
-
-const blogListContainer = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
 const IndexPage = props => {
   const postList = props.data.allMarkdownRemark;

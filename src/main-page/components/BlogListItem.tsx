@@ -1,10 +1,9 @@
 import * as React from "react";
 import Img from "gatsby-image";
-import { css } from "@emotion/core";
-import { greenText } from "../../styles/common";
 import { HalfStyle } from "../../components/HalfStyle";
-import { Typography, Grid } from "@material-ui/core";
+import { Typography, Grid, withStyles } from "@material-ui/core";
 import { AppLink } from "../../components/AppLink";
+import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
 
 interface BlogListItemProps {
   title: string;
@@ -12,36 +11,38 @@ interface BlogListItemProps {
   slug: string;
   image: any;
   excerpt: string;
+  classes: any;
 }
 
-const articleLink = css`
-  transition: color 0.3s;
-  :hover {
-    ${greenText}
+const style = (theme: ThemeOptions) => ({
+  articleLink: {
+    transition: "color 0.3s",
+    "&:hover": {
+      color: theme.palette.text.secondary
+    },
+
+    "&:hover > div": {
+      "box-shadow": "0px 5px 10px 1px rgba(0, 0, 0, 0.2)"
+    }
+  },
+  imageShadow: {
+    transition: "all 0.3s",
+    margin: "0.5rem 0"
+  },
+  articleTitleImage: {
+    border: "5px solid #fff",
+    "box-shadow": "0px 0px 0px 1px rgba(0, 0, 0, 0.2)",
+    margin: "0"
   }
+});
 
-  :hover > div {
-    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.2);
-  }
-`;
-
-const imageShadow = css`
-  transition: all 0.3s;
-  margin: 0.5rem 0;
-`;
-
-const articleTitleImage = css`
-  border: 5px solid #fff;
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.2);
-  margin: 0;
-`;
-
-export const BlogListItem = ({
+const BlogListItemBase = ({
   title,
   date,
   slug,
   image,
-  excerpt
+  excerpt,
+  classes
 }: BlogListItemProps) => (
   <Grid item={true} xs={6} container={true} direction="column">
     <AppLink
@@ -49,13 +50,13 @@ export const BlogListItem = ({
       variant="h3"
       color={"textPrimary" as any}
       to={slug}
-      css={articleLink}
+      className={classes.articleLink}
     >
-      <HalfStyle text={title} halfStyle={greenText} />
-      <div css={imageShadow}>
+      <HalfStyle text={title} />
+      <div className={classes.imageShadow}>
         <Img
           style={{ width: "100%" }}
-          css={articleTitleImage}
+          className={classes.articleTitleImage}
           fixed={image.childImageSharp.fixed}
         />
       </div>
@@ -68,3 +69,5 @@ export const BlogListItem = ({
     </div>
   </Grid>
 );
+
+export const BlogListItem = withStyles(style)(BlogListItemBase);

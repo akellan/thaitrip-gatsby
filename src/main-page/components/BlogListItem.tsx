@@ -61,18 +61,22 @@ export const BlogListItem = ({
   excerpt
 }: BlogListItemProps) => (
   <article css={blogItemContainer}>
-    <Typography variant="h3">
-      <AppLink underline="none" to={slug} css={articleLink}>
-        <HalfStyle text={title} halfStyle={greenText} />
-        <div css={imageShadow}>
-          <Img
-            style={{ height: "130px", width: "430px" }}
-            css={articleTitleImage}
-            fixed={image.childImageSharp.fixed}
-          />
-        </div>
-      </AppLink>
-    </Typography>
+    <AppLink
+      underline="none"
+      variant="h3"
+      color={"textPrimary" as any}
+      to={slug}
+      css={articleLink}
+    >
+      <HalfStyle text={title} halfStyle={greenText} />
+      <div css={imageShadow}>
+        <Img
+          style={{ height: "130px", width: "430px" }}
+          css={articleTitleImage}
+          fixed={image.childImageSharp.fixed}
+        />
+      </div>
+    </AppLink>
     <div css={excerptContainer}>
       <Typography variant="h6" css={dateBlock}>
         {date}

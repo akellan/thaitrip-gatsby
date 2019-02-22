@@ -6,11 +6,5 @@ export const appTheme: Theme = createMuiTheme({
     useNextVariants: true,
     h3: { fontWeight: 300 },
     h1: { fontWeight: 400, fontSize: "4rem" }
-  },
-  palette: {
-    primary: {
-      ...grey,
-      main: grey[700]
-    }
   }
 });

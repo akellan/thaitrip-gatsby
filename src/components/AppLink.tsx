@@ -8,8 +8,14 @@ export interface AppLinkProps extends LinkProps {
 
 export class AppLink extends PureComponent<AppLinkProps> {
   render() {
+    const color = this.props.color as any;
     return (
-      <Link component={ReachLink} to={this.props.to} {...this.props}>
+      <Link
+        component={ReachLink}
+        to={this.props.to}
+        color={color}
+        {...this.props}
+      >
         {this.props.children}
       </Link>
     );

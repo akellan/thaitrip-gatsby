@@ -5,8 +5,6 @@ module.exports = {
     author: `Mykola`
   },
   plugins: [
-    `gatsby-plugin-webpack-size`,
-    `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,

@@ -1,19 +1,19 @@
 import React from "react";
-import { css } from "@emotion/core";
-import { greenText } from "../styles/common";
 import { HalfStyle } from "./HalfStyle";
-import { Grid } from "@material-ui/core";
+import { Grid, withStyles } from "@material-ui/core";
 import { AppLink } from "./AppLink";
 
-const headerContainer = css`
-  height: 8rem;
-`;
+const styles = () => ({
+  padding: {
+    padding: `4rem 0`
+  }
+});
 
-export const MainHeader = () => {
+const MainHeaderBase = ({ classes }) => {
   return (
     <Grid
-      css={headerContainer}
       container={true}
+      className={classes.padding}
       justify="center"
       alignItems="center"
     >
@@ -23,8 +23,10 @@ export const MainHeader = () => {
         underline="none"
         to="/"
       >
-        <HalfStyle text="ThaiTrip" halfStyle={greenText} />
+        <HalfStyle text="ThaiTrip" />
       </AppLink>
     </Grid>
   );
 };
+
+export const MainHeader = withStyles(styles)(MainHeaderBase);

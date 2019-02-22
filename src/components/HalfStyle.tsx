@@ -1,15 +1,11 @@
 import React, { FunctionComponent, Fragment } from "react";
-import { SerializedStyles } from "@emotion/css";
+import { Typography } from "@material-ui/core";
 
 interface HalfStyleProps {
   text: string;
-  halfStyle: SerializedStyles;
 }
 
-export const HalfStyle: FunctionComponent<HalfStyleProps> = ({
-  text,
-  halfStyle
-}) => {
+export const HalfStyle: FunctionComponent<HalfStyleProps> = ({ text }) => {
   if (!text) {
     return null;
   }
@@ -29,7 +25,14 @@ export const HalfStyle: FunctionComponent<HalfStyleProps> = ({
   return (
     <Fragment>
       {firstPart}
-      <span css={halfStyle}>{secondPart}</span>
+      <Typography
+        color="textSecondary"
+        variant="inherit"
+        component="span"
+        inline={true}
+      >
+        {secondPart}
+      </Typography>
     </Fragment>
   );
 };

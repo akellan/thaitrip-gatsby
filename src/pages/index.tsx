@@ -1,8 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components";
 import { BlogListItem } from "../main-page/components/BlogListItem";
 import { css } from "@emotion/core";
+import { Grid } from "@material-ui/core";
 
 const blogListContainer = css`
   display: flex;
@@ -15,7 +16,12 @@ const IndexPage = props => {
   const postList = props.data.allMarkdownRemark;
   return (
     <Layout>
-      <div css={blogListContainer}>
+      <Grid
+        container={true}
+        spacing={40}
+        alignItems="center"
+        direction="column"
+      >
         {postList.edges.map(
           ({
             node: {
@@ -35,7 +41,7 @@ const IndexPage = props => {
             />
           )
         )}
-      </div>
+      </Grid>
     </Layout>
   );
 };

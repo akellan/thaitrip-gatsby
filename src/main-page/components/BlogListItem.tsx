@@ -3,7 +3,7 @@ import Img from "gatsby-image";
 import { css } from "@emotion/core";
 import { greenText } from "../../styles/common";
 import { HalfStyle } from "../../components/HalfStyle";
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import { AppLink } from "../../components/AppLink";
 
 interface BlogListItemProps {
@@ -13,21 +13,6 @@ interface BlogListItemProps {
   image: any;
   excerpt: string;
 }
-
-const blogItemContainer = css`
-  width: 70vw;
-  margin: 2rem;
-`;
-
-const dateBlock = css`
-  float: left;
-`;
-
-const excerptContainer = css`
-  ::after {
-    clear: both;
-  }
-`;
 
 const articleLink = css`
   transition: color 0.3s;
@@ -41,10 +26,8 @@ const articleLink = css`
 `;
 
 const imageShadow = css`
-  height: 130px;
   transition: all 0.3s;
   margin: 0.5rem 0;
-  display: inline-block;
 `;
 
 const articleTitleImage = css`
@@ -60,7 +43,7 @@ export const BlogListItem = ({
   image,
   excerpt
 }: BlogListItemProps) => (
-  <article css={blogItemContainer}>
+  <Grid item={true} xs={6} container={true} direction="column">
     <AppLink
       underline="none"
       variant="h3"
@@ -71,19 +54,17 @@ export const BlogListItem = ({
       <HalfStyle text={title} halfStyle={greenText} />
       <div css={imageShadow}>
         <Img
-          style={{ height: "130px", width: "430px" }}
+          style={{ width: "100%" }}
           css={articleTitleImage}
           fixed={image.childImageSharp.fixed}
         />
       </div>
     </AppLink>
-    <div css={excerptContainer}>
-      <Typography variant="h6" css={dateBlock}>
-        {date}
-      </Typography>
+    <div>
+      <Typography variant="h6">{date}</Typography>
       <Typography variant="body1" component="p">
         {excerpt}
       </Typography>
     </div>
-  </article>
+  </Grid>
 );

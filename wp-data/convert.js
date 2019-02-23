@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 
 const inputDir = "json";
-const outputDir = "md";
+const outputDir = "../src/posts-data";
 
 const postsFie = path.join(inputDir, "posts.json");
 const postsMetaFile = path.join(inputDir, "postmeta.json");
@@ -20,8 +20,7 @@ posts.forEach(post => {
 
   const postImages = postAttachments
     .map(a => a.guid)
-    .map(i => i.replace("http://thaitrip.od.ua/wp-content/uploads", "."))
-    .map(i => `\r\n\t- "${i}"`);
+    .map(i => i.replace("http://thaitrip.od.ua/wp-content/uploads", "."));
 
   const mdResult = convertToMd(post, postImages);
 
@@ -39,6 +38,6 @@ function convertToMd(post, images) {
     .replace("{title_image}", images[0])
     .replace("{post_name}", post.post_name)
     .replace("{post_content}", post.post_content)
-    .replace("{ post_images }", images.join(""))
+    .replace("{ post_images }", images.map(i => `\r\n - "${i}"`).join(""))
     .replace("{date}", post.post_date);
 }

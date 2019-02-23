@@ -51,7 +51,7 @@ export const listQuery = graphql`
           }
           excerpt(pruneLength: 250)
           frontmatter {
-            date(formatString: "D MMMM YYYY", locale: "ru-UA")
+            date
             title
             title_image {
               childImageSharp {

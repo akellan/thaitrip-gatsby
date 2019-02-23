@@ -6,7 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-webpack-size`,
-    `gatsby-plugin-emotion`,
+    // `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-plugin-typescript`,
       options: {
         isTSX: true,
-        jsxPragma: `jsx`,
+        jsxPragma: `React`,
         allExtensions: true
       }
     },

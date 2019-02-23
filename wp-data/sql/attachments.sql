@@ -1,0 +1,1 @@
+select * from wp_posts where post_type = 'attachment'

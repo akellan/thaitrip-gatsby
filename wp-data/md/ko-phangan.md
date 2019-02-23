@@ -1,8 +1,10 @@
 ---
-title: "{title}"
-date: "{date}"
-title_image: "{title_image}"
-post_name: "{post_name}"
+title: "KO Phangan"
+date: "2013-01-19 08:32:56"
+title_image: "undefined"
+post_name: "ko-phangan"
+post_images: 
 ---
 
-{post_content}
+Всем привет! Мы уже на острове,едим. Тут растаманы, русские и все острое. И очень вкусные фрукты. Пыталась пить и есть кокос - не вкусно. Сижу в одном сарафане)
+Подробности о поездке и фотки будут позже.

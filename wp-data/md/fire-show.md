@@ -1,8 +1,17 @@
 ---
-title: "{title}"
-date: "{date}"
-title_image: "{title_image}"
-post_name: "{post_name}"
+title: "Fire show"
+date: "2013-02-06 14:40:53"
+title_image: "undefined"
+post_name: "fire-show"
+post_images: 
 ---
 
-{post_content}
+Видео с FireShow в баре Swing. Сидели на пляже, курили shisha, наслаждались.
+
+&nbsp;
+
+&nbsp;
+
+http://www.youtube.com/watch?v=4f0z-MXeetU
+
+http://www.youtube.com/watch?v=uEuagxL6NZk

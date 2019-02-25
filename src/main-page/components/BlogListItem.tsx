@@ -12,6 +12,7 @@ interface BlogListItemProps {
   image: any;
   excerpt: string;
   classes: any;
+  images: string;
 }
 
 const style = (theme: ThemeOptions) => ({
@@ -42,34 +43,39 @@ const BlogListItemBase = ({
   slug,
   image,
   excerpt,
-  classes
-}: BlogListItemProps) => (
-  <Grid item={true} xs={6} container={true} direction="column">
-    <AppLink
-      underline="none"
-      variant="h3"
-      color={"textPrimary" as any}
-      to={slug}
-      className={classes.articleLink}
-    >
-      <HalfStyle text={title} />
-      <div className={classes.imageShadow}>
-        {image && (
-          <Img
-            style={{ width: "100%", display: "block" }}
-            className={classes.articleTitleImage}
-            fixed={image.childImageSharp.fixed}
-          />
-        )}
+  classes,
+  images
+}: BlogListItemProps) => {
+  console.info(image);
+  console.info(images);
+  return (
+    <Grid item={true} xs={6} container={true} direction="column">
+      <AppLink
+        underline="none"
+        variant="h3"
+        color={"textPrimary" as any}
+        to={slug}
+        className={classes.articleLink}
+      >
+        <HalfStyle text={title} />
+        <div className={classes.imageShadow}>
+          {image && (
+            <Img
+              style={{ width: "100%", display: "block" }}
+              className={classes.articleTitleImage}
+              fixed={image.childImageSharp.fixed}
+            />
+          )}
+        </div>
+      </AppLink>
+      <div>
+        <Typography variant="h6">{date}</Typography>
+        <Typography variant="body1" component="p">
+          {excerpt}
+        </Typography>
       </div>
-    </AppLink>
-    <div>
-      <Typography variant="h6">{date}</Typography>
-      <Typography variant="body1" component="p">
-        {excerpt}
-      </Typography>
-    </div>
-  </Grid>
-);
+    </Grid>
+  );
+};
 
 export const BlogListItem = withStyles(style)(BlogListItemBase);

@@ -20,7 +20,8 @@ posts.forEach(post => {
 
   const postImages = postAttachments
     .map(a => a.guid)
-    .map(i => i.replace("http://thaitrip.od.ua/wp-content/uploads", "."));
+    .map(i => i.replace("http://thaitrip.od.ua/wp-content/uploads", "."))
+    .map(i => i.replace("_новый-размер", ""));
 
   const mdResult = convertToMd(post, postImages);
 

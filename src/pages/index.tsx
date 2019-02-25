@@ -17,7 +17,7 @@ const IndexPage = props => {
         {postList.edges.map(
           ({
             node: {
-              frontmatter: { title, date, title_image },
+              frontmatter: { title, date, title_image, images },
               excerpt,
               id,
               fields: { slug }
@@ -30,6 +30,7 @@ const IndexPage = props => {
               slug={slug}
               image={title_image}
               excerpt={excerpt}
+              images={images}
             />
           )
         )}

@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 
 const inputDir = "json";
-const outputDir = "../src/posts-data";
+const outputDir = "../src/posts";
 
 const postsFie = path.join(inputDir, "posts.json");
 const postsMetaFile = path.join(inputDir, "postmeta.json");
@@ -25,7 +25,24 @@ posts.forEach(post => {
 
   const mdResult = convertToMd(post, postImages);
 
-  fs.writeFileSync(path.join(outputDir, `${post.post_name}.md`), mdResult);
+  const postDir = path.join(outputDir, post.post_name);
+
+  if (!fs.existsSync(postDir)) {
+    fs.mkdirSync(postDir);
+  }
+
+  for (const postImage of postImages) {
+    const imagePath = path.join(outputDir, postImage);
+
+    if (fs.existsSync(imagePath)) {
+      const postImagePath = path.join(postDir, path.basename(imagePath));
+      fs.renameSync(imagePath, postImagePath);
+    } else {
+      console.error(`not_found:${imagePath}`);
+    }
+  }
+
+  fs.writeFileSync(path.join(postDir, `${post.post_name}.md`), mdResult);
 });
 
 function getPostThumbnailMeta(postId) {
@@ -34,11 +51,12 @@ function getPostThumbnailMeta(postId) {
 }
 
 function convertToMd(post, images) {
+  const imageNames = images.map(imagePath => path.basename(imagePath));
   return mdTemplate
     .replace("{title}", post.post_title)
-    .replace("{title_image}", images[0])
+    .replace("{title_image}", imageNames[0])
     .replace("{post_name}", post.post_name)
     .replace("{post_content}", post.post_content)
-    .replace("{ post_images }", images.map(i => `\r\n - "${i}"`).join(""))
+    .replace("{ post_images }", imageNames.map(i => `\r\n - "${i}"`).join(""))
     .replace("{date}", post.post_date);
 }

@@ -53,15 +53,13 @@ exports.createPages = ({ actions, graphql }) => {
   });
 };
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` });
-
     createNodeField({
       node,
       name: `slug`,
-      value: slug
+      value: node.frontmatter.post_name
     });
   }
 };

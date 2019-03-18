@@ -26,6 +26,7 @@ exports.createPages = ({ actions, graphql }) => {
                 }
                 frontmatter {
                   title
+                  post_name
                 }
               }
             }
@@ -39,10 +40,10 @@ exports.createPages = ({ actions, graphql }) => {
         const blogTemplate = path.resolve("./src/templates/post.js");
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           createPage({
-            path: node.fields.slug,
+            path: node.frontmatter.post_name,
             component: blogTemplate,
             context: {
-              slug: node.fields.slug
+              slug: node.frontmatter.post_name
             } // additional data can be passed via context
           });
         });

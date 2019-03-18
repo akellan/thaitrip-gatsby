@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components";
 import { BlogListItem } from "../main-page/components/BlogListItem";
@@ -17,17 +17,16 @@ const IndexPage = props => {
         {postList.edges.map(
           ({
             node: {
-              frontmatter: { title, date, title_image, images },
+              frontmatter: { title, date, title_image, images, post_name },
               excerpt,
-              id,
-              fields: { slug }
+              id
             }
           }) => (
             <BlogListItem
               key={id}
               title={title}
               date={date}
-              slug={slug}
+              slug={post_name}
               image={title_image}
               excerpt={excerpt}
               images={images}
@@ -54,6 +53,7 @@ export const listQuery = graphql`
           frontmatter {
             date
             title
+            post_name
             title_image {
               childImageSharp {
                 fixed {

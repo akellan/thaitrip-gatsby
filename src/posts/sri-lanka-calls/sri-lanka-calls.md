@@ -3,22 +3,6 @@ title: "Sri Lanka calls"
 date: "2015-01-26 20:45:34"
 title_image: "./IMG_4736.jpg"
 post_name: "sri-lanka-calls"
-post_images: 
- - "IMG_4736.jpg"
- - "IMG_4737.jpg"
- - "IMG_4738.jpg"
- - "IMG_4741.jpg"
- - "IMG_4746.jpg"
- - "IMG_4754.jpg"
- - "IMG_4757.jpg"
- - "IMG_4747.jpg"
- - "IMG_4749.jpg"
- - "IMG_4750.jpg"
- - "IMG_4752.jpg"
- - "IMG_4755.jpg"
- - "IMG_4756.jpg"
- - "IMG_4761.jpg"
- - "IMG_4765.jpg"
 ---
 
 Всем привет!

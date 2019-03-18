@@ -3,8 +3,6 @@ title: "Skytrain"
 date: "2013-01-16 21:45:17"
 title_image: "./wpid-IMG_20130116_212657.jpg"
 post_name: "skytrain"
-post_images: 
- - "wpid-IMG_20130116_212657.jpg"
 ---
 
 На пути в Киев. Я уже замерзла(

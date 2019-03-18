@@ -6,7 +6,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-webpack-size`,
-    // `gatsby-plugin-emotion`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
@@ -21,17 +20,10 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts-data`,
-        path: `${__dirname}/src/posts-data`
+        name: `posts`,
+        path: `${__dirname}/src/posts`
       }
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `posts-data`,
-    //     path: `${__dirname}/src/posts-data`
-    //   }
-    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`
     // {

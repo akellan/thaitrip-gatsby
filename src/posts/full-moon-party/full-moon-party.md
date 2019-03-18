@@ -1,7 +1,7 @@
 ---
 title: "Full Moon Party"
 date: "2013-01-30 06:08:13"
-title_image: "063_922x691.jpg"
+title_image: "./063_922x691.jpg"
 post_name: "full-moon-party"
 post_images: 
  - "063_922x691.jpg"

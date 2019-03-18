@@ -54,7 +54,7 @@ function convertToMd(post, images) {
   const imageNames = images.map(imagePath => path.basename(imagePath));
   return mdTemplate
     .replace("{title}", post.post_title)
-    .replace("{title_image}", imageNames[0])
+    .replace("{title_image}", "./" + imageNames[0])
     .replace("{post_name}", post.post_name)
     .replace(
       "{post_content}",

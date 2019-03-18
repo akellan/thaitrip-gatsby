@@ -1,7 +1,7 @@
 ---
 title: "Koh Samui"
 date: "2013-02-01 07:08:05"
-title_image: "008_922x691.jpg"
+title_image: "./008_922x691.jpg"
 post_name: "koh-samui"
 post_images: 
  - "008_922x691.jpg"

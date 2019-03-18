@@ -1,7 +1,7 @@
 ---
 title: "Turtle Farm, Kogala lagoon, Tea factory"
 date: "2015-01-31 19:42:24"
-title_image: "IMG_4955.jpg"
+title_image: "./IMG_4955.jpg"
 post_name: "turtle-farm-kogala-lagoon-tea-factory"
 post_images: 
  - "IMG_4955.jpg"

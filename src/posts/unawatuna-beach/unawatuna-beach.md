@@ -1,7 +1,7 @@
 ---
 title: "Unawatuna beach"
 date: "2015-01-27 18:41:00"
-title_image: "IMG_4768.jpg"
+title_image: "./IMG_4768.jpg"
 post_name: "unawatuna-beach"
 post_images: 
  - "IMG_4768.jpg"

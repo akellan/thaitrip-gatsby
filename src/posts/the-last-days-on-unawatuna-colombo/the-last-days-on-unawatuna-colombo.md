@@ -1,7 +1,7 @@
 ---
 title: "The last days on Unawatuna & Colombo"
 date: "2015-02-04 20:35:59"
-title_image: "IMG_5119.jpg"
+title_image: "./IMG_5119.jpg"
 post_name: "the-last-days-on-unawatuna-colombo"
 post_images: 
  - "IMG_5119.jpg"

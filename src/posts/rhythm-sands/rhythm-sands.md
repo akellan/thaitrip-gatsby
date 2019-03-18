@@ -1,7 +1,7 @@
 ---
 title: "Rhythm &amp; Sands"
 date: "2013-01-29 17:23:17"
-title_image: "008_922x691.jpg"
+title_image: "./008_922x691.jpg"
 post_name: "rhythm-sands"
 post_images: 
  - "008_922x691.jpg"

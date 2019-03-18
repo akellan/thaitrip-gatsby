@@ -1,7 +1,7 @@
 ---
 title: "Jungle"
 date: "2013-02-08 09:18:15"
-title_image: "002_922x6911.jpg"
+title_image: "./002_922x6911.jpg"
 post_name: "jungle"
 post_images: 
  - "002_922x6911.jpg"

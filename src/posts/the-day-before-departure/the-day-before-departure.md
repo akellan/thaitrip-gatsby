@@ -1,7 +1,7 @@
 ---
 title: "The day before departure"
 date: "2015-02-09 12:46:00"
-title_image: "IMG_5171.jpg"
+title_image: "./IMG_5171.jpg"
 post_name: "the-day-before-departure"
 post_images: 
  - "IMG_5171.jpg"

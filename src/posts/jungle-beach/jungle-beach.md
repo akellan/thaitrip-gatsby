@@ -1,7 +1,7 @@
 ---
 title: "Jungle beach"
 date: "2015-01-28 19:00:13"
-title_image: "IMG_4837.jpg"
+title_image: "./IMG_4837.jpg"
 post_name: "jungle-beach"
 post_images: 
  - "IMG_4837.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "Reggae & Kayaking"
 date: "2013-01-24 15:44:12"
-title_image: "006_922x691.jpg"
+title_image: "./006_922x691.jpg"
 post_name: "reggae-kayaking"
 post_images: 
  - "006_922x691.jpg"

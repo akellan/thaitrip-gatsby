@@ -1,7 +1,7 @@
 ---
 title: "Big Waves"
 date: "2015-02-01 17:57:13"
-title_image: "IMG_5050.jpg"
+title_image: "./IMG_5050.jpg"
 post_name: "big-waves"
 post_images: 
  - "IMG_5050.jpg"

@@ -1,7 +1,7 @@
 ---
 title: "Как все началось"
 date: "2013-01-07 23:35:25"
-title_image: "7.jpg"
+title_image: "./7.jpg"
 post_name: "inception"
 post_images: 
  - "7.jpg"

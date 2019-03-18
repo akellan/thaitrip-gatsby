@@ -1,7 +1,7 @@
 ---
 title: "Mu Ko Ang Thong National Park"
 date: "2013-01-30 14:37:48"
-title_image: "005_922x691.jpg"
+title_image: "./005_922x691.jpg"
 post_name: "mu-ko-ang-thong-national-park"
 post_images: 
  - "005_922x691.jpg"

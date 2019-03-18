@@ -1,7 +1,7 @@
 ---
 title: "KO Phangan"
 date: "2013-01-19 08:32:56"
-title_image: "undefined"
+title_image: "./undefined"
 post_name: "ko-phangan"
 post_images: 
 ---

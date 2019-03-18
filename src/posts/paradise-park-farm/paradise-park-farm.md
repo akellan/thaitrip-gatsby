@@ -1,7 +1,7 @@
 ---
 title: "Paradise Park Farm"
 date: "2013-02-08 18:32:25"
-title_image: "001_922x691.jpg"
+title_image: "./001_922x691.jpg"
 post_name: "paradise-park-farm"
 post_images: 
  - "001_922x691.jpg"

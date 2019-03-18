@@ -1,7 +1,7 @@
 ---
 title: "Pool & Haad Rin"
 date: "2013-01-23 08:56:58"
-title_image: "wpid-1358923653122.jpg"
+title_image: "./wpid-1358923653122.jpg"
 post_name: "pool"
 post_images: 
  - "wpid-1358923653122.jpg"

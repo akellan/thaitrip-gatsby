@@ -1,7 +1,7 @@
 ---
 title: "Sri Lanka calls"
 date: "2015-01-26 20:45:34"
-title_image: "IMG_4736.jpg"
+title_image: "./IMG_4736.jpg"
 post_name: "sri-lanka-calls"
 post_images: 
  - "IMG_4736.jpg"

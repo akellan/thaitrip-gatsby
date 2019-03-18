@@ -1,7 +1,7 @@
 ---
 title: "Фотоньки"
 date: "2013-01-19 19:46:45"
-title_image: "IMG_0120_1382x1037_691x518.jpg"
+title_image: "./IMG_0120_1382x1037_691x518.jpg"
 post_name: "phototravelto"
 post_images: 
  - "IMG_0120_1382x1037_691x518.jpg"

@@ -29,32 +29,4 @@ post_images:
 
 Сейчас мы в <a href="https://www.google.com.ua/maps/place/Unawatuna,+Sri+Lanka/@6.0122525,80.2543872,14z/data=!3m1!4b1!4m2!3m1!1s0x3ae172f162bf926d:0xc0444c5e8377446c" target="_blank">Unawatuna</a> . Здесь много туристов, в том числе и русскоговорящих. Много лавочек с фруктами, сувенирами, ювелирными изделиями, одеждой, куча баров-кафе и тук-туков. Честно сказать, нас мало что удивляет, так как местность, заведения практически такие же, как в Тае. Да и пляжи, на наш взгляд, в Тае лучше.
 
-Еда местами вкусная, местами не очень, надо искать, пробовать. Коле утром принесли, ну, чисто нашу мелкую вермишель, приправленную на их манер. Зато вот я ела кари - мне понравилось. Порции здесь огромные, поэтому мы стали заказывать одно блюдо на двоих с дополнительной тарелкой.<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4737_новый-размер.jpg"><img class="alignnone size-full wp-image-875" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4737_новый-размер.jpg" alt="IMG_4737_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4736_новый-размер.jpg"><img class="alignnone size-full wp-image-874" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4736_новый-размер.jpg" alt="IMG_4736_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4738_новый-размер.jpg"><img class="alignnone size-full wp-image-876" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4738_новый-размер.jpg" alt="IMG_4738_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4741_новый-размер.jpg"><img class="alignnone size-full wp-image-877" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4741_новый-размер.jpg" alt="IMG_4741_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4746_новый-размер.jpg"><img class="alignnone size-full wp-image-878" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4746_новый-размер.jpg" alt="IMG_4746_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4754_новый-размер.jpg"><img class="alignnone size-full wp-image-879" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4754_новый-размер.jpg" alt="IMG_4754_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4757_новый-размер.jpg"><img class="alignnone size-full wp-image-880" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4757_новый-размер.jpg" alt="IMG_4757_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4747_новый-размер.jpg"><img class="alignnone size-full wp-image-881" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4747_новый-размер.jpg" alt="IMG_4747_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4749_новый-размер.jpg"><img class="alignnone size-full wp-image-882" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4749_новый-размер.jpg" alt="IMG_4749_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4750_новый-размер.jpg"><img class="alignnone size-full wp-image-883" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4750_новый-размер.jpg" alt="IMG_4750_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4752_новый-размер.jpg"><img class="alignnone size-full wp-image-884" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4752_новый-размер.jpg" alt="IMG_4752_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4755_новый-размер.jpg"><img class="alignnone size-full wp-image-885" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4755_новый-размер.jpg" alt="IMG_4755_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4756_новый-размер.jpg"><img class="alignnone size-full wp-image-886" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4756_новый-размер.jpg" alt="IMG_4756_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4761_новый-размер.jpg"><img class="alignnone size-full wp-image-887" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4761_новый-размер.jpg" alt="IMG_4761_новый размер" width="800" height="600" /></a>
-
-<a href="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4765_новый-размер.jpg"><img class="alignnone size-full wp-image-888" src="http://thaitrip.od.ua/wp-content/uploads/2015/01/IMG_4765_новый-размер.jpg" alt="IMG_4765_новый размер" width="800" height="600" /></a>
+Еда местами вкусная, местами не очень, надо искать, пробовать. Коле утром принесли, ну, чисто нашу мелкую вермишель, приправленную на их манер. Зато вот я ела кари - мне понравилось. Порции здесь огромные, поэтому мы стали заказывать одно блюдо на двоих с дополнительной тарелкой.

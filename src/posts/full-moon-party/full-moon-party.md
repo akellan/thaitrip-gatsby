@@ -30,25 +30,25 @@ http://www.youtube.com/watch?v=iGsVlNO3p0A
 http://www.youtube.com/watch?v=rLtbIxnqCLA
 
 http://www.youtube.com/watch?v=A76QLysFFIU
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/063_922x691.jpg"><img class="alignnone size-full wp-image-442" alt="063_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/063_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/064_922x691.jpg"><img class="alignnone size-full wp-image-443" alt="064_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/064_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/067_922x691.jpg"><img class="alignnone size-full wp-image-444" alt="067_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/067_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/076_922x691.jpg"><img class="alignnone size-full wp-image-445" alt="076_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/076_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/077_922x691.jpg"><img class="alignnone size-full wp-image-446" alt="077_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/077_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/082_922x691.jpg"><img class="alignnone size-full wp-image-447" alt="082_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/082_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/084_922x691.jpg"><img class="alignnone size-full wp-image-448" alt="084_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/084_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/086_922x691.jpg"><img class="alignnone size-full wp-image-449" alt="086_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/086_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/091_922x691.jpg"><img class="alignnone size-full wp-image-450" alt="091_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/091_922x691.jpg" width="922" height="691" /></a>
 
-<a href="http://thaitrip.od.ua/wp-content/uploads/2013/01/058_922x691.jpg"><img class="alignnone size-full wp-image-466" alt="058_922x691" src="http://thaitrip.od.ua/wp-content/uploads/2013/01/058_922x691.jpg" width="922" height="691" /></a>
+
+
+
+
+
+
+
+
+
+
 
 &nbsp;
 

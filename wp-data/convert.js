@@ -56,7 +56,10 @@ function convertToMd(post, images) {
     .replace("{title}", post.post_title)
     .replace("{title_image}", imageNames[0])
     .replace("{post_name}", post.post_name)
-    .replace("{post_content}", post.post_content)
+    .replace(
+      "{post_content}",
+      post.post_content.replace(/<a .+><\/a>/g, "").trim()
+    )
     .replace("{ post_images }", imageNames.map(i => `\r\n - "${i}"`).join(""))
     .replace("{date}", post.post_date);
 }

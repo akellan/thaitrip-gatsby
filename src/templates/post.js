@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 
 export default function BlogPost(props) {
   const post = props.data.markdownRemark;
-  const images = props.data.allFile.edges;
+  const images = props.data.allFile;
   const { title, date } = post.frontmatter;
   return (
     <Layout>
@@ -14,9 +14,10 @@ export default function BlogPost(props) {
         <h2>{date}</h2>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <div>
-          {images.map(({ node }, index) => (
-            <Img key={index} fixed={node.childImageSharp.fixed} />
-          ))}
+          {images &&
+            images.edges.map(({ node }, index) => (
+              <Img key={index} fixed={node.childImageSharp.fixed} />
+            ))}
         </div>
       </div>
     </Layout>

@@ -16,7 +16,7 @@ export default function BlogPost(props) {
         <div>
           {images &&
             images.edges.map(({ node }, index) => (
-              <Img key={index} fixed={node.childImageSharp.fixed} />
+              <Img key={index} fluid={node.childImageSharp.fluid} />
             ))}
         </div>
       </div>
@@ -43,8 +43,8 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+            fluid {
+              ...GatsbyImageSharpFluid
             }
           }
         }

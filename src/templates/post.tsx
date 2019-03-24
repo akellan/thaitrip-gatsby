@@ -2,6 +2,8 @@ import React from "react";
 import { Layout } from "../components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import { Grid, Typography } from "@material-ui/core";
+import { HalfStyle } from "../components/HalfStyle";
 
 export default function BlogPost(props) {
   const post = props.data.markdownRemark;
@@ -9,21 +11,34 @@ export default function BlogPost(props) {
   const { title, date } = post.frontmatter;
   return (
     <Layout>
-      <div>
-        <h1>{title}</h1>
-        <h2>{date}</h2>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <div>
-          {images &&
-            images.edges.map(({ node }, index) => (
-              <Img
-                // style={{ width: 2000 }}
-                key={index}
-                fluid={node.childImageSharp.fluid}
-              />
-            ))}
-        </div>
-      </div>
+      <Grid container={true} justify="center" direction="row">
+        <Grid item={true} xs={10}>
+          <Typography variant="h3">
+            <HalfStyle text={title} />
+          </Typography>
+          <Typography variant="h6">
+            <HalfStyle text={date} />
+          </Typography>
+          <Typography
+            dangerouslySetInnerHTML={{ __html: post.html }}
+            variant="body1"
+          />
+          <Grid
+            container={true}
+            justify="center"
+            xs={12}
+            spacing={8}
+            direction="row"
+          >
+            {images &&
+              images.edges.map(({ node }, index) => (
+                <Grid item={true} key={index} xs={6}>
+                  <Img fluid={node.childImageSharp.fluid} />
+                </Grid>
+              ))}
+          </Grid>
+        </Grid>
+      </Grid>
     </Layout>
   );
 }

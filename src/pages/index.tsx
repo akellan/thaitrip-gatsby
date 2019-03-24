@@ -56,7 +56,7 @@ export const listQuery = graphql`
             post_name
             title_image {
               childImageSharp {
-                fixed {
+                fixed(toFormat: WEBP) {
                   ...GatsbyImageSharpFixed
                 }
               }

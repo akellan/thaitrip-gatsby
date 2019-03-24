@@ -37,7 +37,7 @@ exports.createPages = ({ actions, graphql }) => {
           console.log(result.errors);
           return reject(result.errors);
         }
-        const blogTemplate = path.resolve("./src/templates/post.js");
+        const blogTemplate = path.resolve("./src/templates/post.tsx");
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           createPage({
             path: node.frontmatter.post_name,

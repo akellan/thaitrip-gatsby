@@ -23,13 +23,7 @@ export default function BlogPost(props) {
             dangerouslySetInnerHTML={{ __html: post.html }}
             variant="body1"
           />
-          <Grid
-            container={true}
-            justify="center"
-            xs={12}
-            spacing={8}
-            direction="row"
-          >
+          <Grid container={true} justify="center" spacing={8} direction="row">
             {images &&
               images.edges.map(({ node }, index) => (
                 <Grid item={true} key={index} xs={6}>

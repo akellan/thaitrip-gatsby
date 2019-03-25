@@ -2,20 +2,33 @@ import React, { useState, useCallback } from "react";
 import { Layout } from "../components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
-import { Grid, Typography, Dialog, DialogContent } from "@material-ui/core";
+import { Grid, Typography, withStyles, Modal } from "@material-ui/core";
 import { HalfStyle } from "../components/HalfStyle";
+import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
 
-export default function BlogPost(props) {
+const style = (theme: ThemeOptions) => ({
+  fullScreenImageContainer: {
+    width: "80vw"
+  },
+  modalDialog: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  }
+});
+
+function BlogPost(props) {
   const post = props.data.markdownRemark;
   const images = props.data.allFile;
+  const { classes } = props;
   const { title, date } = post.frontmatter;
 
   const [imageOpen, setImageOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState<string>(null);
+  const [currentImage, setCurrentImage] = useState<any>(null);
 
   const openDialog = image => {
-    setImageOpen(true);
     setCurrentImage(image);
+    setImageOpen(true);
   };
 
   const closeDialog = useCallback(() => {
@@ -39,19 +52,32 @@ export default function BlogPost(props) {
           <Grid container={true} justify="center" spacing={8} direction="row">
             {images &&
               images.edges.map(({ node }, index) => (
-                <Grid item={true} key={index} xs={6} onClick={openDialog}>
+                <Grid
+                  item={true}
+                  key={index}
+                  xs={6}
+                  onClick={useCallback(() => openDialog(node), [])}
+                >
                   <Img fluid={node.childImageSharp.fluid} />
                 </Grid>
               ))}
           </Grid>
         </Grid>
       </Grid>
-      <Dialog open={imageOpen} onClose={closeDialog}>
-        <DialogContent>Image</DialogContent>
-      </Dialog>
+      <Modal
+        open={imageOpen}
+        onClose={closeDialog}
+        className={classes.modalDialog}
+      >
+        <div className={classes.fullScreenImageContainer}>
+          {currentImage && <Img fluid={currentImage.childImageSharp.fluid} />}
+        </div>
+      </Modal>
     </Layout>
   );
 }
+
+export default withStyles(style)(BlogPost);
 
 export const query = graphql`
   query PostQuery($slug: String!) {

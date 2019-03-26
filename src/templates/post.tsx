@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import { Grid, Typography, withStyles, Modal } from "@material-ui/core";
 import { HalfStyle } from "../components/HalfStyle";
 import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
+import withRoot from "../styles/withRoot";
 
 const style = (theme: ThemeOptions) => ({
   fullScreenImageContainer: {
@@ -77,7 +78,7 @@ function BlogPost(props) {
   );
 }
 
-export default withStyles(style)(BlogPost);
+export default withRoot(withStyles(style)(BlogPost));
 
 export const query = graphql`
   query PostQuery($slug: String!) {

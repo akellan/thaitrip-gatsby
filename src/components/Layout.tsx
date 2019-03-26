@@ -10,4 +10,4 @@ const LayoutDefault: FunctionComponent = ({ children }) => (
   </Fragment>
 );
 
-export const Layout = withRoot(LayoutDefault);
+export const Layout = LayoutDefault;

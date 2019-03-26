@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import { Layout } from "../components";
 import { BlogListItem } from "../main-page/components/BlogListItem";
 import { Grid } from "@material-ui/core";
+import withRoot from "../styles/withRoot";
 
 const IndexPage = props => {
   const postList = props.data.allMarkdownRemark;
@@ -38,7 +39,7 @@ const IndexPage = props => {
   );
 };
 
-export default IndexPage;
+export default withRoot(IndexPage);
 
 export const listQuery = graphql`
   query ListQuery {

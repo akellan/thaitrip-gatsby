@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, KeyboardEvent } from "react";
 import { Layout } from "../components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
@@ -7,33 +7,80 @@ import { HalfStyle } from "../components/HalfStyle";
 import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
 import withRoot from "../styles/withRoot";
 
+const navigationOverlay = {
+  position: "absolute",
+  top: 0,
+  height: "100%",
+  width: "50%"
+};
+
 const style = (theme: ThemeOptions) => ({
   fullScreenImageContainer: {
-    width: "80vw"
+    width: "75vw",
+    position: "relative"
   },
   modalDialog: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center"
+  },
+  leftSide: {
+    ...navigationOverlay,
+    left: 0
+  },
+  rightSide: {
+    ...navigationOverlay,
+    right: 0
   }
 });
 
-function BlogPost(props) {
+interface BlogPostProps {
+  data: {
+    allFile: {
+      edges: any[];
+    };
+    markdownRemark: any;
+  };
+  classes: any;
+}
+
+function BlogPost(props: BlogPostProps) {
   const post = props.data.markdownRemark;
   const images = props.data.allFile;
   const { classes } = props;
   const { title, date } = post.frontmatter;
 
   const [imageOpen, setImageOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState<any>(null);
+  const [currentImage, setCurrentImage] = useState<number>(null);
 
-  const openDialog = image => {
+  const openDialog = (image: number) => {
     setCurrentImage(image);
     setImageOpen(true);
   };
 
   const closeDialog = useCallback(() => {
     setImageOpen(false);
+  }, []);
+
+  const nextImage = useCallback(() => {
+    setCurrentImage(image =>
+      image === images.edges.length - 1 ? 0 : image + 1
+    );
+  }, []);
+
+  const previousImage = useCallback(() => {
+    setCurrentImage(image =>
+      image === 0 ? images.edges.length - 1 : image - 1
+    );
+  }, []);
+
+  const handleKeyboard = useCallback((e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.keyCode === 39) {
+      nextImage();
+    }
+    if (e.keyCode === 37) {
+      previousImage();
+    }
   }, []);
 
   return (
@@ -57,7 +104,7 @@ function BlogPost(props) {
                   item={true}
                   key={index}
                   xs={6}
-                  onClick={useCallback(() => openDialog(node), [])}
+                  onClick={useCallback(() => openDialog(index), [])}
                 >
                   <Img fluid={node.childImageSharp.fluid} />
                 </Grid>
@@ -69,9 +116,16 @@ function BlogPost(props) {
         open={imageOpen}
         onClose={closeDialog}
         className={classes.modalDialog}
+        onKeyDown={handleKeyboard}
       >
         <div className={classes.fullScreenImageContainer}>
-          {currentImage && <Img fluid={currentImage.childImageSharp.fluid} />}
+          {currentImage != null && (
+            <Img
+              fluid={images.edges[currentImage].node.childImageSharp.fluid}
+            />
+          )}
+          <div onClick={previousImage} className={classes.leftSide} />
+          <div onClick={nextImage} className={classes.rightSide} />
         </div>
       </Modal>
     </Layout>

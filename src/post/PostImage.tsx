@@ -12,8 +12,10 @@ export function PostImage({ imageIndex, fluidImage, onClick }: PostImageProps) {
   return (
     <Grid
       item={true}
+      xs={10}
       sm={6}
-      lg={4}
+      md={4}
+      lg={3}
       onClick={useCallback(() => onClick(imageIndex), [imageIndex])}
     >
       <Image fluid={fluidImage} />

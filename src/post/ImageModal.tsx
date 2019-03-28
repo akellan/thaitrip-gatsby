@@ -64,14 +64,16 @@ function ImageModal({
   onPrevious
 }: ImageModalProps) {
   const handleKeyboard = useCallback((e: KeyboardEvent<HTMLDivElement>) => {
-    if (e.keyCode === 39) {
-      onNext();
-    }
-    if (e.keyCode === 37) {
-      onPrevious();
-    }
-    if (e.keyCode === 27) {
-      onClose();
+    switch (e.key) {
+      case "ArrowRight":
+        onNext();
+        break;
+      case "ArrowLeft":
+        onPrevious();
+        break;
+      case "Escape":
+        onClose();
+        break;
     }
   }, []);
 

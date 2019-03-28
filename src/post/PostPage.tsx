@@ -43,6 +43,18 @@ function PostPage(props: BlogPostProps) {
     setImageModalOpen(false);
   }, []);
 
+  const nextImage = useCallback(() => {
+    setCurrentImage(imageIndex => {
+      return imageIndex === fluidImages.length - 1 ? 0 : imageIndex + 1;
+    });
+  }, []);
+
+  const previousImage = useCallback(() => {
+    setCurrentImage(imageIndex => {
+      return imageIndex === 0 ? fluidImages.length - 1 : imageIndex - 1;
+    });
+  }, []);
+
   return (
     <Layout>
       <Grid container={true} justify="center" direction="row">
@@ -72,8 +84,9 @@ function PostPage(props: BlogPostProps) {
       <ImageModal
         open={imageModalOpen}
         onClose={closeDialog}
-        imageIndex={currentImage}
-        fluidImages={fluidImages}
+        fluidImage={fluidImages[currentImage]}
+        onNext={nextImage}
+        onPrevious={previousImage}
       />
     </Layout>
   );

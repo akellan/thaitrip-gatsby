@@ -49,41 +49,32 @@ const styles = createStyles({
 
 interface ImageModalProps extends WithStyles<typeof styles> {
   open: boolean;
+  fluidImage: FluidObject;
   onClose: () => void;
-  imageIndex: number;
-  fluidImages: ReadonlyArray<FluidObject>;
+  onNext: () => void;
+  onPrevious: () => void;
 }
 
 function ImageModal({
   open,
   onClose,
   classes,
-  fluidImages,
-  imageIndex = 0
+  fluidImage,
+  onNext,
+  onPrevious
 }: ImageModalProps) {
-  const [transImage, setTransImage] = useState([imageIndex]);
-  const nextImage = useCallback(() => {
-    setTransImage(([imageIndex]) => {
-      return [imageIndex === fluidImages.length - 1 ? 0 : imageIndex + 1];
-    });
-  }, []);
-
-  const previousImage = useCallback(() => {
-    setTransImage(([imageIndex]) => {
-      return [imageIndex === 0 ? fluidImages.length - 1 : imageIndex - 1];
-    });
-  }, []);
   const handleKeyboard = useCallback((e: KeyboardEvent<HTMLDivElement>) => {
     if (e.keyCode === 39) {
-      nextImage();
+      onNext();
     }
     if (e.keyCode === 37) {
-      previousImage();
+      onPrevious();
     }
     if (e.keyCode === 27) {
       onClose();
     }
   }, []);
+
   return (
     <Modal open={open} onClose={onClose} onKeyDown={handleKeyboard}>
       <TransitionGroup
@@ -92,10 +83,10 @@ function ImageModal({
           if (e.currentTarget === e.target) onClose();
         }, [])}
       >
-        {transImage.map(image => (
+        {[fluidImage].map(image => (
           <CSSTransition
             className={classes.transition}
-            key={image}
+            key={image.src}
             timeout={300}
             classNames={{
               enter: classes.largeImageEnter,
@@ -105,9 +96,9 @@ function ImageModal({
             }}
           >
             <div>
-              <GatsbyImage fluid={fluidImages[image]} />
-              <div onClick={previousImage} className={classes.leftSide} />
-              <div onClick={nextImage} className={classes.rightSide} />
+              <GatsbyImage fluid={image} />
+              <div onClick={onPrevious} className={classes.leftSide} />
+              <div onClick={onNext} className={classes.rightSide} />
             </div>
           </CSSTransition>
         ))}

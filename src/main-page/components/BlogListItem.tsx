@@ -47,7 +47,7 @@ const BlogListItemBase = ({
   images
 }: BlogListItemProps) => {
   return (
-    <Grid item={true} xs={6} container={true} direction="column">
+    <Grid item={true} xs={11} md={8} lg={6} container={true} direction="column">
       <AppLink
         underline="none"
         variant="h3"

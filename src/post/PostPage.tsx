@@ -6,6 +6,7 @@ import withRoot from "../styles/withRoot";
 import { graphql } from "gatsby";
 import ImageModal from "./ImageModal";
 import { PostImage } from "./PostImage";
+import useNavigator from "./useNavigator";
 
 interface BlogPostProps {
   data: {
@@ -22,12 +23,6 @@ function PostPage(props: BlogPostProps) {
   const { title, date } = post.frontmatter;
 
   const [imageModalOpen, setImageModalOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(0);
-
-  const openDialog = useCallback((imageIndex: number) => {
-    setImageModalOpen(true);
-    setCurrentImage(imageIndex);
-  }, []);
 
   const fluidImages = useMemo(() => {
     try {
@@ -39,20 +34,17 @@ function PostPage(props: BlogPostProps) {
     }
   }, [props.data.allFile]);
 
+  const [image, setCurrentByIndex, previousImage, nextImage] = useNavigator(
+    fluidImages
+  );
+
+  const openDialog = useCallback((imageIndex: number) => {
+    setImageModalOpen(true);
+    setCurrentByIndex(imageIndex);
+  }, []);
+
   const closeDialog = useCallback(() => {
     setImageModalOpen(false);
-  }, []);
-
-  const nextImage = useCallback(() => {
-    setCurrentImage(imageIndex => {
-      return imageIndex === fluidImages.length - 1 ? 0 : imageIndex + 1;
-    });
-  }, []);
-
-  const previousImage = useCallback(() => {
-    setCurrentImage(imageIndex => {
-      return imageIndex === 0 ? fluidImages.length - 1 : imageIndex - 1;
-    });
   }, []);
 
   return (
@@ -84,7 +76,7 @@ function PostPage(props: BlogPostProps) {
       <ImageModal
         open={imageModalOpen}
         onClose={closeDialog}
-        fluidImage={fluidImages[currentImage]}
+        fluidImage={image}
         onNext={nextImage}
         onPrevious={previousImage}
       />

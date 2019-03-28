@@ -1,11 +1,7 @@
-import { withStyles, Modal } from "@material-ui/core";
+import { withStyles, Modal, createStyles } from "@material-ui/core";
 import React, { useCallback, KeyboardEvent, useState } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import {
-  CSSProperties,
-  StyleRules,
-  WithStyles
-} from "@material-ui/core/styles/withStyles";
+import { CSSProperties, WithStyles } from "@material-ui/core/styles/withStyles";
 import GatsbyImage, { FluidObject } from "gatsby-image";
 
 const sideClickPane: CSSProperties = {
@@ -15,20 +11,16 @@ const sideClickPane: CSSProperties = {
   width: "50%"
 };
 
-const styles: StyleRules = {
-  fullScreenImageContainer: {
-    position: "relative",
-    height: "100%"
-  },
+const styles = createStyles({
   transitionGroup: {
     position: "relative",
     height: "100%"
   },
-  transaction: {
+  transition: {
     position: "absolute",
-    width: "75vw",
     top: "50%",
     left: "50%",
+    width: "75vw",
     transform: "translate(-50%, -50%)"
   },
   largeImageEnter: {
@@ -53,7 +45,7 @@ const styles: StyleRules = {
     ...sideClickPane,
     right: 0
   }
-};
+});
 
 interface ImageModalProps extends WithStyles<typeof styles> {
   open: boolean;
@@ -93,42 +85,33 @@ function ImageModal({
     }
   }, []);
   return (
-    <Modal
-      open={open}
-      onClose={onClose}
-      className={classes.modalDialog}
-      onKeyDown={handleKeyboard}
-    >
-      <div className={classes.fullScreenImageContainer}>
-        <TransitionGroup
-          className={classes.transitionGroup}
-          onClick={useCallback(e => {
-            if (e.currentTarget === e.target) onClose();
-          }, [])}
-        >
-          {transImage.map(image => (
-            <CSSTransition
-              className={classes.transaction}
-              key={image}
-              timeout={300}
-              classNames={{
-                appear: classes.largeImageAppear,
-                appearActive: classes.largeImageAppearActive,
-                enter: classes.largeImageEnter,
-                enterActive: classes.largeImageEnterActive,
-                exit: classes.largeImageExit,
-                exitActive: classes.largeImageExitActive
-              }}
-            >
-              <div>
-                <GatsbyImage fluid={fluidImages[image]} />
-                <div onClick={previousImage} className={classes.leftSide} />
-                <div onClick={nextImage} className={classes.rightSide} />
-              </div>
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
-      </div>
+    <Modal open={open} onClose={onClose} onKeyDown={handleKeyboard}>
+      <TransitionGroup
+        className={classes.transitionGroup}
+        onClick={useCallback(e => {
+          if (e.currentTarget === e.target) onClose();
+        }, [])}
+      >
+        {transImage.map(image => (
+          <CSSTransition
+            className={classes.transition}
+            key={image}
+            timeout={300}
+            classNames={{
+              enter: classes.largeImageEnter,
+              enterActive: classes.largeImageEnterActive,
+              exit: classes.largeImageExit,
+              exitActive: classes.largeImageExitActive
+            }}
+          >
+            <div>
+              <GatsbyImage fluid={fluidImages[image]} />
+              <div onClick={previousImage} className={classes.leftSide} />
+              <div onClick={nextImage} className={classes.rightSide} />
+            </div>
+          </CSSTransition>
+        ))}
+      </TransitionGroup>
     </Modal>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useMemo } from "react";
 import { Layout } from "../components";
-import Img from "gatsby-image";
 import { Grid, Typography } from "@material-ui/core";
 import { HalfStyle } from "../components/HalfStyle";
 import withRoot from "../styles/withRoot";

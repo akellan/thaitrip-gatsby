@@ -63,6 +63,10 @@ function ImageModal({
   onNext,
   onPrevious
 }: ImageModalProps) {
+  if (!fluidImage) {
+    return null;
+  }
+
   const handleKeyboard = useCallback((e: KeyboardEvent<HTMLDivElement>) => {
     switch (e.key) {
       case "ArrowRight":

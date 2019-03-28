@@ -6,10 +6,7 @@ import getPageContext from "./getPageContext";
 
 function withRoot(Component) {
   class WithRoot extends React.Component {
-    constructor(props) {
-      super(props);
-      this.muiPageContext = getPageContext();
-    }
+    muiPageContext = getPageContext();
 
     componentDidMount() {
       // Remove the server-side injected CSS.

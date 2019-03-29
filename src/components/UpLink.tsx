@@ -7,7 +7,7 @@ const styles = (theme: Theme) =>
     createStyles({
         upLinkClass: {
             position: "fixed",
-            bottom: "2rem",
+            bottom: "3rem",
             right: "3rem",
             display: "none",
             cursor: "pointer",

@@ -7,8 +7,8 @@ const styles = (theme: Theme) =>
     createStyles({
         upLinkClass: {
             position: "fixed",
-            bottom: "5%",
-            right: "3%",
+            bottom: "2rem",
+            right: "3rem",
             display: "none",
             cursor: "pointer",
             backgroundColor: theme.palette.text.secondary,

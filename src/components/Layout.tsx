@@ -1,13 +1,14 @@
 import React, { FunctionComponent, Fragment } from "react";
 import { MainHeader } from "../main-page/components";
 import "../styles/index.css";
-import withRoot from "../styles/withRoot";
+import UpLink from "./UpLink";
 
 const LayoutDefault: FunctionComponent = ({ children }) => (
-  <Fragment>
-    <MainHeader />
-    <main>{children}</main>
-  </Fragment>
+   <Fragment>
+      <MainHeader />
+      <main>{children}</main>
+      <UpLink />
+   </Fragment>
 );
 
 export const Layout = LayoutDefault;

@@ -12,7 +12,7 @@ export function PostImage({ imageIndex, fluidImage, onClick }: PostImageProps) {
   return (
     <Grid
       item={true}
-      xs={10}
+      xs={12}
       sm={6}
       md={4}
       lg={3}

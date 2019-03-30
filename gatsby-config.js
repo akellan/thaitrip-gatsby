@@ -34,7 +34,7 @@ module.exports = {
                 start_url: `/`,
                 background_color: `#fff`,
                 theme_color: `#1ac308`,
-                display: `minimal-ui`,
+                display: `standalone`,
                 icon: `src/icons/palm-tree-icon.png`
             }
         },

@@ -10,33 +10,8 @@ post_name: "full-moon-party"
 Последнее время проводятся мероприятия «Half Moon Party» и «Black Moon Party», данные вечеринки так же имеют популярность, но они значительно меньше по масштабу.
 Люди приходят туда не для того, чтобы послушать музыку и потанцевать, а нажраться, разукраситься и просто пообщаться. Нам не понравилось! Это было ужасно: пляж был похож на большую мусорку и туалет. Музыка была неважная, но все исправляли чудо-ведерки с выпивкой :) В общем, все это вы можете посмотреть ниже:
 
-&nbsp;
+`youtube:http://www.youtube.com/watch?v=iGsVlNO3p0A`
 
-http://www.youtube.com/watch?v=iGsVlNO3p0A
+`youtube:http://www.youtube.com/watch?v=rLtbIxnqCLA`
 
-http://www.youtube.com/watch?v=rLtbIxnqCLA
-
-http://www.youtube.com/watch?v=A76QLysFFIU
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&nbsp;
-
-&nbsp;
+`youtube:http://www.youtube.com/watch?v=A76QLysFFIU`

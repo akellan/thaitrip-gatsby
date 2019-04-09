@@ -7,9 +7,9 @@ post_name: "jungle"
 
 Ездили там, где не ступала нога обычного туриста! К сожалению, в глубь джунглей не поехали - мопед двоих не выдержит. Покатавшись в глубине острова, наткнулись на захватывающий дух view point (красивое место):
 
-http://www.youtube.com/watch?v=MjSjidW7ntc&amp;feature=youtu.be
+`youtube:http://www.youtube.com/watch?v=MjSjidW7ntc&amp;feature=youtu.be`
 
-http://www.youtube.com/watch?v=lrMNQ-q_OnM&amp;feature=youtu.be
+`youtube:http://www.youtube.com/watch?v=lrMNQ-q_OnM&amp;feature=youtu.be`
 
 &nbsp;
 

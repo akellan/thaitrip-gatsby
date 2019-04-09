@@ -6,9 +6,25 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-webpack-size`,
-        `gatsby-transformer-remark`,
+        {
+            resolve: "gatsby-transformer-remark",
+            options: {
+                plugins: [
+                    {
+                        resolve: "gatsby-remark-embed-video",
+                        options: {
+                            width: 800,
+                            ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
+                            height: 400, // Optional: Overrides optional.ratio
+                            related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
+                            noIframeBorder: true //Optional: Disable insertion of <style> border: 0
+                        }
+                    }
+                ]
+            }
+        },
         `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-catch-links`,
+        // `gatsby-plugin-catch-links`,
         {
             resolve: `gatsby-plugin-typescript`,
             options: {
@@ -37,9 +53,9 @@ module.exports = {
                 display: `standalone`,
                 icon: `src/icons/palm-tree-icon.png`
             }
-        },
+        }
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.app/offline
-        "gatsby-plugin-offline"
+        // "gatsby-plugin-offline"
     ]
 };

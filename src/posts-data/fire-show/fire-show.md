@@ -7,10 +7,6 @@ post_name: "fire-show"
 
 Видео с FireShow в баре Swing. Сидели на пляже, курили shisha, наслаждались.
 
-&nbsp;
+`youtube:http://www.youtube.com/watch?v=4f0z-MXeetU`
 
-&nbsp;
-
-http://www.youtube.com/watch?v=4f0z-MXeetU
-
-http://www.youtube.com/watch?v=uEuagxL6NZk
+`youtube:http://www.youtube.com/watch?v=uEuagxL6NZk`

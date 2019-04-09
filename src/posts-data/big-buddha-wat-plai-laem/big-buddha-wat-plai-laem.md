@@ -5,6 +5,4 @@ title_image: "./002_922x691.jpg"
 post_name: "big-buddha-wat-plai-laem"
 ---
 
-http://www.youtube.com/watch?v=BhcqucoVlVs
-
-&nbsp;
+`youtube:http://www.youtube.com/watch?v=BhcqucoVlVs`

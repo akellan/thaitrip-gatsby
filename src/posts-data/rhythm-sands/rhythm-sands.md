@@ -13,13 +13,10 @@ post_name: "rhythm-sands"
 
 Я впервые увидела те самые ведра для коктейлей, вместо обычных стаканов. Вот до чего техника дошла - детские ведерки для выпивки используют!
 
-
-
-
 The main stage
 
-http://www.youtube.com/watch?v=tC7GHQhlbzA
+`youtube:http://www.youtube.com/watch?v=tC7GHQhlbzA`
 
 The Electronic Lounge
 
-http://www.youtube.com/watch?v=oqulaGZIF-Y
+`youtube:http://www.youtube.com/watch?v=oqulaGZIF-Y`

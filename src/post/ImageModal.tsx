@@ -1,5 +1,5 @@
 import { withStyles, Modal, createStyles, Grid } from "@material-ui/core";
-import React, { useCallback, KeyboardEvent, useState } from "react";
+import React, { useCallback, KeyboardEvent } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { CSSProperties, WithStyles } from "@material-ui/core/styles/withStyles";
 import GatsbyImage, { FluidObject } from "gatsby-image";

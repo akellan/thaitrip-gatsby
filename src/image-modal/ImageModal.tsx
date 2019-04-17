@@ -3,13 +3,7 @@ import React, { useCallback, KeyboardEvent } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { CSSProperties, WithStyles } from "@material-ui/core/styles/withStyles";
 import GatsbyImage, { FluidObject } from "gatsby-image";
-
-const sideClickPane: CSSProperties = {
-    position: "absolute",
-    top: 0,
-    height: "100%",
-    width: "50%"
-};
+import NextImageOverlay, { NextImageButton } from "./NextImageOverlay";
 
 const styles = createStyles({
     gatsbyImage: {
@@ -43,14 +37,6 @@ const styles = createStyles({
     largeImageExitActive: {
         opacity: 0,
         transition: "opacity 500ms"
-    },
-    leftSide: {
-        ...sideClickPane,
-        left: 0
-    },
-    rightSide: {
-        ...sideClickPane,
-        right: 0
     }
 });
 
@@ -119,8 +105,14 @@ function ImageModal({
                         </CSSTransition>
                     ))}
                 </TransitionGroup>
-                <div onClick={onPrevious} className={classes.leftSide} />
-                <div onClick={onNext} className={classes.rightSide} />
+                <NextImageOverlay
+                    onClick={onPrevious}
+                    type={NextImageButton.Left}
+                />
+                <NextImageOverlay
+                    onClick={onNext}
+                    type={NextImageButton.Right}
+                />
             </Grid>
         </Modal>
     );

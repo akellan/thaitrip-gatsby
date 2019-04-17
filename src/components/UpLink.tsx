@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { createStyles, WithStyles, withStyles, Theme } from "@material-ui/core";
 import { getScrollTop, setScrollTop } from "./useScrollTop";
-import Icon from "@material-ui/core/SvgIcon";
+import SvgIcon from "@material-ui/core/SvgIcon";
 
 const styles = (theme: Theme) =>
     createStyles({
@@ -59,12 +59,12 @@ export function UpLink({ classes }: UpLinkProps) {
             onClick={scrollToTop}
             className={classes.upLinkClass}
         >
-            <Icon fontSize="inherit">
+            <SvgIcon fontSize="inherit">
                 <path
                     fill="#fff"
                     d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"
                 />
-            </Icon>
+            </SvgIcon>
         </div>
     );
 }

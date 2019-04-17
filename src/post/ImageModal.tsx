@@ -1,9 +1,4 @@
-import {
-    withStyles,
-    Modal,
-    createStyles,
-    FormHelperText
-} from "@material-ui/core";
+import { withStyles, Modal, createStyles, Grid } from "@material-ui/core";
 import React, { useCallback, KeyboardEvent, useState } from "react";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { CSSProperties, WithStyles } from "@material-ui/core/styles/withStyles";
@@ -95,42 +90,38 @@ function ImageModal({
 
     return (
         <Modal open={open} onClose={onClose} onKeyDown={handleKeyboard}>
-            <TransitionGroup
-                className={classes.transitionGroup}
-                onClick={useCallback(e => {
-                    if (e.currentTarget === e.target) onClose();
-                }, [])}
-            >
-                {[fluidImage].map(image => (
-                    <CSSTransition
-                        className={classes.transition}
-                        key={image.src}
-                        timeout={300}
-                        classNames={{
-                            enter: classes.largeImageEnter,
-                            enterActive: classes.largeImageEnterActive,
-                            exit: classes.largeImageExit,
-                            exitActive: classes.largeImageExitActive
-                        }}
-                    >
-                        <div>
-                            <GatsbyImage
-                                imgStyle={{ objectFit: "contain" }}
-                                className={classes.gatsbyImage}
-                                fluid={image}
-                            />
-                            <div
-                                onClick={onPrevious}
-                                className={classes.leftSide}
-                            />
-                            <div
-                                onClick={onNext}
-                                className={classes.rightSide}
-                            />
-                        </div>
-                    </CSSTransition>
-                ))}
-            </TransitionGroup>
+            <Grid className={classes.transitionGroup}>
+                <TransitionGroup
+                    className={classes.transitionGroup}
+                    onClick={useCallback(e => {
+                        if (e.currentTarget === e.target) onClose();
+                    }, [])}
+                >
+                    {[fluidImage].map(image => (
+                        <CSSTransition
+                            className={classes.transition}
+                            key={image.src}
+                            timeout={300}
+                            classNames={{
+                                enter: classes.largeImageEnter,
+                                enterActive: classes.largeImageEnterActive,
+                                exit: classes.largeImageExit,
+                                exitActive: classes.largeImageExitActive
+                            }}
+                        >
+                            <div>
+                                <GatsbyImage
+                                    imgStyle={{ objectFit: "contain" }}
+                                    className={classes.gatsbyImage}
+                                    fluid={image}
+                                />
+                            </div>
+                        </CSSTransition>
+                    ))}
+                </TransitionGroup>
+                <div onClick={onPrevious} className={classes.leftSide} />
+                <div onClick={onNext} className={classes.rightSide} />
+            </Grid>
         </Modal>
     );
 }

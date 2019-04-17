@@ -4,6 +4,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { CSSProperties, WithStyles } from "@material-ui/core/styles/withStyles";
 import GatsbyImage, { FluidObject } from "gatsby-image";
 import NextImageOverlay, { NextImageButton } from "./NextImageOverlay";
+import CloseIcon from "./CloseIcon";
 
 const styles = createStyles({
     gatsbyImage: {
@@ -77,12 +78,7 @@ function ImageModal({
     return (
         <Modal open={open} onClose={onClose} onKeyDown={handleKeyboard}>
             <Grid className={classes.transitionGroup}>
-                <TransitionGroup
-                    className={classes.transitionGroup}
-                    onClick={useCallback(e => {
-                        if (e.currentTarget === e.target) onClose();
-                    }, [])}
-                >
+                <TransitionGroup className={classes.transitionGroup}>
                     {[fluidImage].map(image => (
                         <CSSTransition
                             className={classes.transition}
@@ -113,6 +109,7 @@ function ImageModal({
                     onClick={onNext}
                     type={NextImageButton.Right}
                 />
+                <CloseIcon onClick={onClose} />
             </Grid>
         </Modal>
     );

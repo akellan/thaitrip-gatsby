@@ -6,7 +6,7 @@ import SvgIcon from "@material-ui/core/SvgIcon";
 const sideClickPane: CSSProperties = {
     position: "absolute",
     top: "50%",
-    fontSize: "5rem",
+    fontSize: "4rem",
     cursor: "pointer"
 };
 

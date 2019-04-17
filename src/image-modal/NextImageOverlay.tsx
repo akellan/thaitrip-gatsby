@@ -7,24 +7,29 @@ const sideClickPane: CSSProperties = {
     position: "absolute",
     top: "50%",
     fontSize: "4rem",
-    cursor: "pointer"
+    cursor: "pointer",
+    transition: "all 0.2s",
+    opacity: 0.7,
+    transform: "scale(1)",
+    "&:active": {
+        transform: "scale(0.9)",
+        opacity: 1
+    }
 };
 
 const styles = (theme: Theme) =>
     createStyles({
         leftSide: {
             ...sideClickPane,
-            left: "2rem",
-            transform: "translateY(-50%) rotate(-90deg) "
+            left: "2rem"
         },
         rightSide: {
             ...sideClickPane,
-            right: "2rem",
-            transform: "translateY(-50%) rotate(90deg) "
+            right: "2rem"
         },
         arrowIcon: {
-            fill: theme.palette.text.secondary,
-            opacity: 0.7
+            fill: theme.palette.text.secondary
+            // opacity: 0.7
         }
     });
 
@@ -47,10 +52,17 @@ function NextImageOverlay({
     return (
         <Grid onClick={onClick} className={sideClassName}>
             <SvgIcon fontSize="inherit">
-                <path
-                    className={arrowIcon}
-                    d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"
-                />
+                {type === NextImageButton.Left ? (
+                    <path
+                        className={arrowIcon}
+                        d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
+                    />
+                ) : (
+                    <path
+                        className={arrowIcon}
+                        d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                    />
+                )}
             </SvgIcon>
         </Grid>
     );

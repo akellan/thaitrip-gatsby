@@ -20,7 +20,13 @@ const styles = (theme: Theme) =>
             top: "2rem",
             right: "2rem",
             fontSize: "3rem",
-            cursor: "pointer"
+            cursor: "pointer",
+            transform: "scale(1)",
+            transition: "all 0.2s",
+            "&:active": {
+                transform: "scale(0.9)",
+                opacity: 1
+            }
         }
     });
 

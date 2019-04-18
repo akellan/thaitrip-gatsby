@@ -1,3 +1,5 @@
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c208a563-a94a-470a-a32b-55c968d66a0d/deploy-status)](https://app.netlify.com/sites/thaitrip/deploys)
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

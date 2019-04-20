@@ -63,7 +63,7 @@ export const listQuery = graphql`
                         post_name
                         title_image {
                             childImageSharp {
-                                fixed {
+                                fixed(width: 800, height: 250) {
                                     ...GatsbyImageSharpFixed
                                 }
                             }

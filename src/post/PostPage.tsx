@@ -10,7 +10,10 @@ import useNavigator from "./useNavigator";
 
 interface BlogPostProps {
     data: {
-        allFile: {
+        smallImages: {
+            edges: any[];
+        };
+        largeImages: {
             edges: any[];
         };
         markdownRemark: any;
@@ -24,18 +27,26 @@ function PostPage(props: BlogPostProps) {
 
     const [imageModalOpen, setImageModalOpen] = useState(false);
 
-    const fluidImages = useMemo(() => {
+    const imagesGet = function(props: BlogPostProps, alias: string) {
         try {
-            return props.data.allFile.edges.map(
+            return props.data[alias].edges.map(
                 edge => edge.node.childImageSharp.fluid
             );
         } catch (_) {
             return [];
         }
-    }, [props.data.allFile]);
+    };
+
+    const fluidImages = useMemo(() => {
+        return imagesGet(props, "smallImages");
+    }, [props.data.smallImages]);
+
+    const largeImages = useMemo(() => {
+        return imagesGet(props, "largeImages");
+    }, [props.data.largeImages]);
 
     const [image, setCurrentByIndex, previousImage, nextImage] = useNavigator(
-        fluidImages
+        largeImages
     );
 
     const openDialog = useCallback((imageIndex: number) => {
@@ -101,7 +112,7 @@ export const query = graphql`
             }
         }
 
-        allFile(
+        smallImages: allFile(
             filter: {
                 extension: { regex: "/(jpg|jpeg)/i" }
                 relativeDirectory: { eq: $slug }
@@ -110,7 +121,24 @@ export const query = graphql`
             edges {
                 node {
                     childImageSharp {
-                        fluid(srcSetBreakpoints: [800]) {
+                        fluid(maxWidth: 300) {
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        }
+
+        largeImages: allFile(
+            filter: {
+                extension: { regex: "/(jpg|jpeg)/i" }
+                relativeDirectory: { eq: $slug }
+            }
+        ) {
+            edges {
+                node {
+                    childImageSharp {
+                        fluid {
                             ...GatsbyImageSharpFluid
                         }
                     }
